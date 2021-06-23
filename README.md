@@ -1,4 +1,4 @@
-### React Typescript Boilerplate
+### CV
 
 ## Running in docker
 
