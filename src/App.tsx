@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
 
 import { Header, Section, JobItem } from "./components";
 import workData from "./data/work-experience.json";
@@ -18,12 +18,13 @@ const App: FC = () => {
         ))}
       </Section>
 
-      <Section title="Communicational skills">
-        <p style={{ width: "50%" }}>
-          {commData.text.split("\n").map((line, index) => (
-            <p key={index}>{line}</p>
-          ))}
-        </p>
+      <Section icon={faPeopleArrows} title="Communicational skills">
+        {commData.text.split("\n").map(line => (
+          <>
+            <br />
+            {line}
+          </>
+        ))}
       </Section>
 
       <Section title="Job-related skills">Hello world</Section>
