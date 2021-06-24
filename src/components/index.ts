@@ -1,3 +1,3 @@
 export { Header } from "./Header";
-export { ColumnItem } from "./ColumnItem";
+export { Section } from "./Section";
 export { JobItem } from "./JobItem";

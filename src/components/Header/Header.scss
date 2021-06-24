@@ -16,3 +16,9 @@
     flex-flow: column nowrap;
   }
 }
+
+@media print {
+  .header-notes {
+    display: none;
+  }
+}
