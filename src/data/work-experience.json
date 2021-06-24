@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "position": "Software Developer",
+      "company": "ActiveCollab (A51 D.O.O.)",
+      "startedAt": "01-2020",
+      "endedAt": "",
+      "current": true,
+      "address": "Novi Sad, Serbia"
+    },
+    {
+      "position": "Web Developer",
+      "company": "Vivify Ideas D.O.O.",
+      "startedAt": "01-2019",
+      "endedAt": "07-2019",
+      "current": false,
+      "address": "Novi Sad, Serbia"
+    },
+    {
+      "position": "System Administrator / Tech Support",
+      "company": "E-Gimnazija / Media Networks D.O.O.",
+      "startedAt": "05-2017",
+      "endedAt": "09-2018",
+      "current": false,
+      "address": "Novi Sad, Serbia"
+    },
+    {
+      "position": "Photographer",
+      "company": "WeRunNS",
+      "startedAt": "03-2016",
+      "endedAt": "05-2017",
+      "current": false,
+      "address": "Novi Sad, Serbia"
+    }
+  ]
+}
