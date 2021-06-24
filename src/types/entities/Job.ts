@@ -1,8 +1,6 @@
-export interface Job {
+import { BaseSectionItem } from "./BaseSectionItem";
+
+export interface Job extends BaseSectionItem {
   position: string;
   company: string;
-  startedAt: string;
-  endedAt: string;
-  current: boolean;
-  address: string;
 }

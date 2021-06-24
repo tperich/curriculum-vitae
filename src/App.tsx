@@ -1,10 +1,18 @@
 import React, { FC } from "react";
 
-import { faLaptopCode, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHammer,
+  faHandHoldingHeart,
+  faLaptopCode,
+  faPeopleArrows,
+  faSchool,
+} from "@fortawesome/free-solid-svg-icons";
 
-import { Header, Section, JobItem } from "./components";
+import { Header, Section, SectionItem } from "./components";
 import workData from "./data/work-experience.json";
 import commData from "./data/communicational-skills.json";
+import skillsData from "./data/job-skills.json";
+import educationData from "./data/education.json";
 import "./styles/main.scss";
 
 const App: FC = () => {
@@ -13,8 +21,8 @@ const App: FC = () => {
       <Header />
 
       <Section icon={faLaptopCode} title="Work Experience">
-        {workData.jobs.map((job, index) => (
-          <JobItem key={index} job={job} />
+        {workData.map((job, index) => (
+          <SectionItem key={index} item={job} />
         ))}
       </Section>
 
@@ -25,13 +33,37 @@ const App: FC = () => {
             {line}
           </>
         ))}
+        {/* Additional break-lines due to printing offset */}
+        <br />
+        <br />
+        <br />
       </Section>
 
-      <Section title="Job-related skills">Hello world</Section>
+      <Section icon={faHammer} title="Job-related skills">
+        {skillsData.map((skillArea, index) => (
+          <div key={index}>
+            <h3 style={{ marginBottom: 5 }}>{skillArea.title}</h3>
 
-      <Section title="Education">Hello world</Section>
+            <ul style={{ margin: 0 }}>
+              {skillArea.skills.map((skill, index) => (
+                <li key={index}>
+                  {skill.title} {skill.details && `(${skill.details})`}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Section>
 
-      <Section title="Volunteering">Hello world</Section>
+      <Section icon={faSchool} title="Education">
+        {educationData.map((item, index) => (
+          <SectionItem key={index} item={item} />
+        ))}
+      </Section>
+
+      <Section icon={faHandHoldingHeart} title="Volunteering">
+        Hello world
+      </Section>
     </div>
   );
 };
