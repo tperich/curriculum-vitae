@@ -24,11 +24,11 @@ const Header: FC = () => {
     headerText.classList.add("invisible");
 
     const imageData = await (await html2canvas(document.body)).toDataURL("image/png");
+
+    headerText.classList.remove("invisible");
     const pdf = new jsPDF();
     pdf.addImage(imageData, "PNG", 20, -3, -160, -160, "FAST", "FAST");
     pdf.save("CV-Tomislav-Peric.pdf");
-
-    headerText.classList.remove("invisible");
   };
 
   return (
@@ -71,10 +71,10 @@ const Header: FC = () => {
         </p>
 
         <div>
-          <a title="Download PDF" onClick={printDocument}>
+          <a className="pdf-button" title="Download PDF" onClick={printDocument}>
             <FontAwesomeIcon className="icon" icon={faFilePdf} />
           </a>
-          <a href="#" title="Export JSON">
+          <a className="json-button" title="Export JSON">
             <FontAwesomeIcon className="icon" icon={faCode} />
           </a>
         </div>

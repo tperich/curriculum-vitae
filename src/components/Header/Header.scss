@@ -43,3 +43,14 @@
     display: none;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-flow: column nowrap;
+
+    .pdf-button {
+      // html2canvas doesn't work well on phones :(
+      display: none;
+    }
+  }
+}

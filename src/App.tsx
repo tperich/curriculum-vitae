@@ -28,11 +28,11 @@ const App: FC = () => {
       </Section>
 
       <Section icon={faPeopleArrows} title="Communicational skills">
-        {commData.text.split("\n").map(line => (
-          <>
+        {commData.text.split("\n").map((line, index) => (
+          <span key={index}>
             <br />
             {line}
-          </>
+          </span>
         ))}
         {/* Additional break-lines due to printing offset */}
         <br className="print-inline" />
