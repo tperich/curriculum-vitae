@@ -17,7 +17,7 @@ const HeaderItem: FC<HeaderItemProps> = ({ title, icon, value, link }: HeaderIte
     <div className="header-item">
       <div className="header-item__title">
         {title}
-        {icon && <FontAwesomeIcon className="icon" icon={icon} color="black" fixedWidth pull="right" />}
+        {icon && <FontAwesomeIcon className="icon" icon={icon} color="black" />}
       </div>
 
       <div>

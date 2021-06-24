@@ -1,21 +1,8 @@
 import React, { FC } from "react";
 
-import {
-  faAddressBook,
-  faAddressCard,
-  faAngry,
-  faChalkboardTeacher,
-  faCode,
-  faCodeBranch,
-  faComment,
-  faDownload,
-  faEnvelope,
-  faFilePdf,
-  faGlobeEurope,
-  faMapPin,
-  faParagraph,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+import { faCode, faEnvelope, faFilePdf, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
 import data from "../../data/header.json";
@@ -25,9 +12,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Header: FC = () => {
   const isMacOS = window.navigator.platform.startsWith("Mac");
 
-  const printDocument = () => {
-    const input = document.getElementById("root");
-    console.log(input);
+  const printDocument = async () => {
+    // Fix for html2canvas not showing SVG
+    const svgElements = document.body.querySelectorAll("svg");
+    svgElements.forEach(function (item) {
+      item.setAttribute("width", item.getBoundingClientRect().width.toString());
+      item.setAttribute("height", item.getBoundingClientRect().height.toString());
+    });
+
+    const headerText = document.getElementsByClassName("header-notes")[0];
+    headerText.classList.add("invisible");
+
+    const imageData = await (await html2canvas(document.body)).toDataURL("image/png");
+    const pdf = new jsPDF();
+    pdf.addImage(imageData, "PNG", 20, -3, -160, -160, "FAST", "FAST");
+    pdf.save("CV-Tomislav-Peric.pdf");
+
+    headerText.classList.remove("invisible");
   };
 
   return (
@@ -55,10 +56,10 @@ const Header: FC = () => {
         <p>
           This CV is written in React.js and is fully responsive.
           <br />
-          - You can download a PDF version in the right corner
           <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P
+          <br />- You can download a PDF version by clicking on the button below
           <br />
-          - You can use the options below to export it in JSON
+          - You can export it in JSON by cliking the code button below
           <br />- Or you can clone the source code at{" "}
           <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
             Github

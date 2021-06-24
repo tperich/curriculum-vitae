@@ -23,6 +23,11 @@ a {
   color: $secondary;
 }
 
+// Helper classes
+.invisible {
+  display: none;
+}
+
 // Print
 .print-inline {
   display: none;
