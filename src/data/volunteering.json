@@ -1,0 +1,12 @@
+[
+  {
+    "title": "PySer",
+    "position": "Staff"
+  },
+  {
+    "title": "Tilda Center",
+    "position": "Member",
+    "startedAt": "2016",
+    "current": true
+  }
+]

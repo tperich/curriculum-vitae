@@ -13,6 +13,7 @@ import workData from "./data/work-experience.json";
 import commData from "./data/communicational-skills.json";
 import skillsData from "./data/job-skills.json";
 import educationData from "./data/education.json";
+import volunteeringData from "./data/volunteering.json";
 import "./styles/main.scss";
 
 const App: FC = () => {
@@ -62,7 +63,9 @@ const App: FC = () => {
       </Section>
 
       <Section icon={faHandHoldingHeart} title="Volunteering">
-        Hello world
+        {volunteeringData.map((item, index) => (
+          <SectionItem key={index} item={item} />
+        ))}
       </Section>
     </div>
   );
