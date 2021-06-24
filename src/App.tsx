@@ -1,21 +1,19 @@
-import React, { ReactElement } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { FC } from "react";
 
-function App(): ReactElement {
+import { Header, ColumnItem } from "./components";
+import "./styles/main.scss";
+
+const App: FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+    <div className="root">
+      <Header />
+      <ColumnItem title="Work Experience">Hello world</ColumnItem>
+      <ColumnItem title="Communicational skills">Hello world</ColumnItem>
+      <ColumnItem title="Job-related skills">Hello world</ColumnItem>
+      <ColumnItem title="Education">Hello world</ColumnItem>
+      <ColumnItem title="Volunteering">Hello world</ColumnItem>
     </div>
   );
-}
+};
 
 export default App;
