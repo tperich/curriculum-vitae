@@ -19,10 +19,9 @@ const Section: FC<Props> = ({ icon, title = "Title", children, containerStyles }
         {icon && <FontAwesomeIcon className="icon" icon={icon} />}
         <h1>{title}</h1>
       </div>
-
       <hr />
 
-      {children}
+      <div className="section__children">{children}</div>
     </div>
   );
 };
