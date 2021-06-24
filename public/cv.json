@@ -1,0 +1,186 @@
+[
+ {
+  "job-skills": [
+   {
+    "title": "Frontend",
+    "skills": [
+     {
+      "title": "HTML",
+      "details": "HTML5, semantic HTML"
+     },
+     {
+      "title": "CSS",
+      "details": "SASS/SCSS, BEM methodology"
+     },
+     {
+      "title": "JavaScript",
+      "details": "ES6+, Jest, Cypress, Webpack, jQuery"
+     },
+     {
+      "title": "React",
+      "details": "Redux, MobX, Saga, Reselect, etc."
+     },
+     {
+      "title": "React Native",
+      "details": "React Native CLI, Expo CLI"
+     }
+    ]
+   },
+   {
+    "title": "Backend",
+    "skills": [
+     {
+      "title": "PHP",
+      "details": "Laravel, phpunit, phpdoc, Swagger"
+     },
+     {
+      "title": "NodeJS",
+      "details": "Laravel, phpunit, phpdoc, Swagger"
+     },
+     {
+      "title": "Python",
+      "details": "Laravel, phpunit, phpdoc, Swagger"
+     },
+     {
+      "title": "MySQL, MariaDB, MongoDB",
+      "details": ""
+     }
+    ]
+   },
+   {
+    "title": "DevOps",
+    "skills": [
+     {
+      "title": "Provisioning",
+      "details": "Ansible"
+     },
+     {
+      "title": "Containerization",
+      "details": "Docker, Podman, Vagrant"
+     },
+     {
+      "title": "CI/CD",
+      "details": "Jenkins, TeamCity CI, Gitlab CI, Fastlane"
+     },
+     {
+      "title": "Monitoring",
+      "details": "Prometheus, Grafana, Graylog"
+     },
+     {
+      "title": "Security",
+      "details": "DAST, SAST"
+     }
+    ]
+   },
+   {
+    "title": "Security",
+    "skills": [
+     {
+      "title": "Enumeration",
+      "details": "nmap, dirbuster/gobuster"
+     },
+     {
+      "title": "Pentesting",
+      "details": "Burpsuite, OWASP ZAP, Metasploit"
+     },
+     {
+      "title": "Vulnerability Assessment",
+      "details": "Nessus, Nikto, OpenVAS, WireShark"
+     }
+    ]
+   },
+   {
+    "title": "Other",
+    "skills": [
+     {
+      "title": "Git",
+      "details": ""
+     },
+     {
+      "title": "Shell",
+      "details": "sh, bash, zsh, python, make"
+     },
+     {
+      "title": "Brainfuck",
+      "details": "esoteric programming language"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "volunteering": [
+   {
+    "title": "PySer",
+    "position": "Staff"
+   },
+   {
+    "title": "Tilda Center",
+    "position": "Member",
+    "startedAt": "2016",
+    "current": true
+   }
+  ]
+ },
+ {
+  "work-experience": [
+   {
+    "title": "Software Developer",
+    "company": "ActiveCollab (A51 D.O.O.)",
+    "startedAt": "01-2020",
+    "endedAt": "",
+    "current": true,
+    "address": "Novi Sad, Serbia"
+   },
+   {
+    "title": "Web Developer",
+    "company": "Vivify Ideas D.O.O.",
+    "startedAt": "01-2019",
+    "endedAt": "07-2019",
+    "current": false,
+    "address": "Novi Sad, Serbia"
+   },
+   {
+    "title": "System Administrator / Tech Support",
+    "company": "E-Gimnazija / Media Networks D.O.O.",
+    "startedAt": "05-2017",
+    "endedAt": "09-2018",
+    "current": false,
+    "address": "Novi Sad, Serbia"
+   },
+   {
+    "title": "Photographer",
+    "company": "WeRunNS",
+    "startedAt": "03-2016",
+    "endedAt": "05-2017",
+    "current": false,
+    "address": "Novi Sad, Serbia"
+   }
+  ]
+ },
+ {
+  "education": [
+   {
+    "title": "E-Gimnazija",
+    "startedAt": "09-2012",
+    "endedAt": "07-2016",
+    "current": false,
+    "address": "Novi Sad, Serbia"
+   }
+  ]
+ },
+ {
+  "header": {
+   "title": "Tomislav Peri\u0107",
+   "phone": "+(389) 69 303 1103",
+   "email": "tomislavperich@gmail.com",
+   "website": "https://github.com/tperich",
+   "address": "Novi Sad, Srbija"
+  }
+ },
+ {
+  "communicational-skills": {
+   "text": "Languages spoken: Serbian and English. \n\nProfessional communication skills acquired through working as a photographer and with 3rd parties as techsupport. \nExtended experience in working with teams and clients in achieving business and personal goals."
+  }
+ }
+]
