@@ -5,16 +5,16 @@ body {
   padding: 40px;
 }
 
-.root {
-  display: flex;
-  flex-flow: column nowrap;
-  color: $secondary;
-}
-
 h1 {
   margin: 0;
 }
 
 a {
+  color: $secondary;
+}
+
+.root {
+  display: flex;
+  flex-flow: column nowrap;
   color: $secondary;
 }
