@@ -1,3 +1,3 @@
 import { BaseSectionItem } from "./BaseSectionItem";
 
-export interface Volunteering extends Exclude<BaseSectionItem, "address"> {}
+export interface Volunteering extends Partial<Exclude<BaseSectionItem, "address">> {}

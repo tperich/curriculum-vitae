@@ -17,6 +17,27 @@
   }
 }
 
+.header-notes {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    font-size: 22px;
+    padding: 0 10px;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-3px);
+    }
+  }
+
+  .icon:first-of-type {
+    margin-left: 0;
+  }
+}
+
 @media print {
   .header-notes {
     display: none;

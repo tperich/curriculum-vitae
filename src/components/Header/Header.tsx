@@ -1,13 +1,34 @@
 import React, { FC } from "react";
 
-import { faEnvelope, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAddressBook,
+  faAddressCard,
+  faAngry,
+  faChalkboardTeacher,
+  faCode,
+  faCodeBranch,
+  faComment,
+  faDownload,
+  faEnvelope,
+  faFilePdf,
+  faGlobeEurope,
+  faMapPin,
+  faParagraph,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
 import data from "../../data/header.json";
 import "./Header.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header: FC = () => {
   const isMacOS = window.navigator.platform.startsWith("Mac");
+
+  const printDocument = () => {
+    const input = document.getElementById("root");
+    console.log(input);
+  };
 
   return (
     <div className="header">
@@ -47,6 +68,15 @@ const Header: FC = () => {
           <br />
           V2 will probably run Doom
         </p>
+
+        <div>
+          <a title="Download PDF" onClick={printDocument}>
+            <FontAwesomeIcon className="icon" icon={faFilePdf} />
+          </a>
+          <a href="#" title="Export JSON">
+            <FontAwesomeIcon className="icon" icon={faCode} />
+          </a>
+        </div>
       </div>
     </div>
   );

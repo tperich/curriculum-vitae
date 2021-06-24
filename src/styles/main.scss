@@ -11,10 +11,30 @@ h1 {
 
 a {
   color: $secondary;
+
+  &:hover {
+    border-bottom: 2px solid $secondary;
+  }
 }
 
 .root {
   display: flex;
   flex-flow: column nowrap;
   color: $secondary;
+}
+
+// Print
+.print-inline {
+  display: none;
+}
+
+@media print {
+  html,
+  body {
+    height: 99%;
+  }
+
+  .print-inline {
+    display: inline;
+  }
 }
