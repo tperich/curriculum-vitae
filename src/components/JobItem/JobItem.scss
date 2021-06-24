@@ -1,0 +1,27 @@
+@import "../../styles/_colors";
+
+.job-item {
+  margin: 15px 0;
+
+  p {
+    margin: 2px 0;
+  }
+
+  &__title {
+    color: $primary_700;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__dates {
+    opacity: 0.6;
+  }
+
+  &__address {
+    opacity: 0.6;
+  }
+}
+
+.job-item:last-child {
+  margin-bottom: 0;
+}

@@ -1,43 +1,52 @@
 import React, { FC } from "react";
+
+import { faEnvelope, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
+
+import { HeaderItem } from "./HeaderItem";
+import data from "../../data/header.json";
 import "./Header.scss";
 
 const Header: FC = () => {
+  const isMacOS = window.navigator.platform.startsWith("Mac");
+
   return (
     <div className="header">
-      <h1 className="header__title">Tomislav Perić</h1>
+      <div className="header-hero">
+        <h1 className="header__title">{data.title}</h1>
 
-      <div className="header__contact">
-        <HeaderItem title="P" value="(+381) 69 303 1103" link="tel:+381693031103" />
-        <HeaderItem
-          title="E"
-          value="tomislavperich@gmail.com"
-          link="mailto:tomislavperich@gmail.com?subject=We would like to talk to you about..."
-        />
-        <HeaderItem title="W" value="github.com/tperich" link="https://github.com/tperich" />
-        <HeaderItem title="A" value="Novi Sad, Serbia" link="https://www.google.com/maps/place/Novi+Sad/" />
+        <div className="header__contact">
+          <HeaderItem icon={faPhone} value={data.phone} link={`tel:${data.phone}`} />
+          <HeaderItem
+            icon={faEnvelope}
+            value={data.email}
+            link={`mailto:${data.email}?subject=We'd like to talk to you about...`}
+          />
+          <HeaderItem icon={faGlobeEurope} value={data.website} link={data.website} />
+          <HeaderItem
+            icon={faMapPin}
+            value={data.address}
+            link={`https://www.google.com/maps/place/${data.address}/`}
+          />
+        </div>
       </div>
-    </div>
-  );
-};
 
-interface HeaderItemProps {
-  title: string;
-  value: string | number;
-  link?: string;
-}
-
-const HeaderItem: FC<HeaderItemProps> = ({ title, value, link }: HeaderItemProps) => {
-  return (
-    <div className="header-item">
-      <p>{title}</p>
-      <div>
-        {link ? (
-          <a href={link} target="_blank" rel="noreferrer">
-            {value}
-          </a>
-        ) : (
-          value
-        )}
+      <div className="header-notes">
+        <p>
+          This CV is written in React.js and is fully responsive.
+          <br />
+          - You can download a PDF version in the right corner
+          <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P
+          <br />
+          - You can use the options below to export it in JSON
+          <br />- Or you can clone the source code at{" "}
+          <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
+            Github
+          </a>{" "}
+          and run it inside Docker!
+          <br />
+          <br />
+          V2 will probably run Doom
+        </p>
       </div>
     </div>
   );

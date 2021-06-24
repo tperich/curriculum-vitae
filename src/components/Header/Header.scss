@@ -1,6 +1,9 @@
+@import "../../styles/_colors.scss";
+
 .header {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   width: inherit;
   padding-bottom: 10px;
 
@@ -11,26 +14,5 @@
   &__contact {
     display: flex;
     flex-flow: column nowrap;
-  }
-}
-
-.header-item {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-
-  p {
-    width: 40px;
-    text-align: center;
-    font-size: 22px;
-    margin: 0;
-  }
-
-  div {
-    text-align: start;
-  }
-
-  a {
-    text-decoration: none;
   }
 }

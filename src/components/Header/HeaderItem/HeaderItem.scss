@@ -1,0 +1,31 @@
+@import "../../../styles/_colors";
+
+.header-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 5px 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    padding-right: 10px;
+    margin: 0 10px;
+
+    .icon {
+      font-size: 20px;
+      color: $secondary;
+    }
+  }
+
+  div {
+    text-align: start;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
