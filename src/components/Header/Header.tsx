@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faEnvelope, faFilePdf, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
+import { API } from "../../constants";
 import data from "../../data/header.json";
 import "./Header.scss";
 
@@ -33,13 +34,14 @@ const Header: FC = () => {
   };
 
   const fetchJSON = () => {
+    const url = `${API.BASE_URL}:${API.API_PORT}/generate-json`;
     axios
-      .get("https://localhost:3000/generate-json")
+      .get(url)
       .then(response => {
         console.log(response.data);
       })
       .catch(error => {
-        console.log("Errrror:", error);
+        console.error(error);
       });
   };
 

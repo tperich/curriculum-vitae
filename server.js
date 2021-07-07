@@ -6,7 +6,7 @@ const express = require("express");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.REACT_APP_API_PORT;
 
 if (process.env.NODE_ENV === "production") {
   const key = fs.readFileSync(process.env.PATH_TO_SSL_PRIVATE_KEY);
@@ -25,10 +25,8 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.get("/generate-json", (req, res) => {
   try {
-    exec("python3 bin/prepare-json.py", (error, stdout, stderr) => {
-      const file = require("./public/cv.json");
-      res.set("Access-Control-Allow-Origin", "*");
-      res.json(file);
+    exec("python3 bin/prepare-json.py", () => {
+      res.download("./public/cv.json");
     });
   } catch (error) {
     console.error(error);
