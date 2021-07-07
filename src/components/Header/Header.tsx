@@ -1,13 +1,14 @@
 import React, { FC } from "react";
 
+import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faEnvelope, faFilePdf, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
 import data from "../../data/header.json";
 import "./Header.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header: FC = () => {
   const isMacOS = window.navigator.platform.startsWith("Mac");
@@ -29,6 +30,33 @@ const Header: FC = () => {
     const pdf = new jsPDF();
     pdf.addImage(imageData, "PNG", 20, -3, -160, -160, "FAST", "FAST");
     pdf.save("CV-Tomislav-Peric.pdf");
+  };
+
+  const fetchJSON = () => {
+    // const response = await fetch("http://localhost:3000/generate-json");
+    axios
+      .get("http://localhost:3000/generate-json")
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log("Errrror:", error);
+      });
+    // fetch("http://localhost:3000/generate-json", {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   mode: "no-cors",
+    // })
+    //   .then(function (response) {
+    //     console.log(response);
+    //     return response.json();
+    //   })
+    //   .then(function (myJson) {
+    //     console.log(myJson);
+    //   });
+    // console.log(response);
   };
 
   return (
@@ -74,9 +102,9 @@ const Header: FC = () => {
           <a className="pdf-button" title="Download PDF" onClick={printDocument}>
             <FontAwesomeIcon className="icon" icon={faFilePdf} />
           </a>
-          <a className="json-button" title="Export JSON">
+          <button type="button" className="json-button" title="Export JSON" onClick={fetchJSON}>
             <FontAwesomeIcon className="icon" icon={faCode} />
-          </a>
+          </button>
         </div>
       </div>
     </div>

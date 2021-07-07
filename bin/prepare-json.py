@@ -17,4 +17,5 @@ for f in glob.glob(f"../{targetdir}/*.json"):
 
 with open("public/cv.json", "w") as f:
     encoded = json.dumps(result, indent=True)
+    print(encoded)
     f.write(encoded)
