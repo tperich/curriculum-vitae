@@ -33,30 +33,14 @@ const Header: FC = () => {
   };
 
   const fetchJSON = () => {
-    // const response = await fetch("http://localhost:3000/generate-json");
     axios
-      .get("http://localhost:3000/generate-json")
+      .get("https://localhost:3000/generate-json")
       .then(response => {
         console.log(response.data);
       })
       .catch(error => {
         console.log("Errrror:", error);
       });
-    // fetch("http://localhost:3000/generate-json", {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    //   mode: "no-cors",
-    // })
-    //   .then(function (response) {
-    //     console.log(response);
-    //     return response.json();
-    //   })
-    //   .then(function (myJson) {
-    //     console.log(myJson);
-    //   });
-    // console.log(response);
   };
 
   return (
