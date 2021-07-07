@@ -33,11 +33,11 @@
       },
       {
         "title": "NodeJS",
-        "details": "Laravel, phpunit, phpdoc, Swagger"
+        "details": "Express.js"
       },
       {
         "title": "Python",
-        "details": "Laravel, phpunit, phpdoc, Swagger"
+        "details": "Flask, Django"
       },
       {
         "title": "MySQL, MariaDB, MongoDB",
