@@ -72,8 +72,7 @@ const Header: FC = () => {
           <br />
           <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P
           <br />- You can download a PDF version by clicking on the button below
-          <br />
-          - You can export it in JSON by cliking the code button below
+          <br />- <del>You can export it in JSON by cliking the code button below</del> (still in development)
           <br />- Or you can clone the source code at{" "}
           <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
             Github
@@ -88,9 +87,9 @@ const Header: FC = () => {
           <a className="pdf-button" title="Download PDF" onClick={printDocument}>
             <FontAwesomeIcon className="icon" icon={faFilePdf} />
           </a>
-          <button type="button" className="json-button" title="Export JSON" onClick={fetchJSON}>
+          {/* <button type="button" className="json-button" title="Export JSON" onClick={fetchJSON}>
             <FontAwesomeIcon className="icon" icon={faCode} />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
