@@ -2,11 +2,13 @@ const fs = require("fs");
 const https = require("https");
 const exec = require("child_process").exec;
 const express = require("express");
+const cors = require("cors");
 
 require("dotenv").config();
 
 const app = express();
 const port = process.env.REACT_APP_API_PORT;
+app.use(cors())
 
 if (process.env.NODE_ENV === "production") {
   const key = fs.readFileSync(process.env.PATH_TO_SSL_PRIVATE_KEY);
