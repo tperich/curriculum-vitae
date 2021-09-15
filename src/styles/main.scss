@@ -1,8 +1,12 @@
 @import "colors";
 
+::selection {
+  color: #00ff00;
+  background-color: black;
+}
+
 body {
-  background-color: $background;
-  padding: 40px;
+  padding: 40px 400px;
 }
 
 h1 {
@@ -13,7 +17,17 @@ a {
   color: $secondary;
 
   &:hover {
-    border-bottom: 2px solid $secondary;
+    border-bottom: 2px solid $primary_800;
+  }
+}
+
+.dark {
+  background-color: $secondary;
+  color: $background;
+
+  ::selection {
+    color: black;
+    background-color: #00ff00;
   }
 }
 
@@ -33,10 +47,17 @@ a {
   display: none;
 }
 
+@media only screen and (max-width: 1400px) {
+  body {
+    padding: 40px;
+  }
+}
+
 @media print {
   html,
   body {
     height: 99%;
+    padding: 40px;
   }
 
   .print-inline {

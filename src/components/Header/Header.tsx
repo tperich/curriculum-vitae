@@ -4,14 +4,30 @@ import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faEnvelope, faFilePdf, faGlobeEurope, faMapPin, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faEnvelope,
+  faMoon,
+  faSun,
+  faFilePdf,
+  faGlobeEurope,
+  faMapPin,
+  faPhone,
+  faLightbulb,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
+import { Theme } from "../../types/entities";
 import { API } from "../../constants";
 import data from "../../data/header.json";
 import "./Header.scss";
 
-const Header: FC = () => {
+interface HeaderProps {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}
+
+const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
   const isMacOS = window.navigator.platform.startsWith("Mac");
 
   const printDocument = async () => {
@@ -45,20 +61,26 @@ const Header: FC = () => {
       });
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <div className="header">
+    <div className={`header ${theme}`}>
       <div className="header-hero">
         <h1 className="header__title">{data.title}</h1>
 
         <div className="header__contact">
-          <HeaderItem icon={faPhone} value={data.phone} link={`tel:${data.phone}`} />
+          <HeaderItem theme={theme} icon={faPhone} value={data.phone} link={`tel:${data.phone}`} />
           <HeaderItem
+            theme={theme}
             icon={faEnvelope}
             value={data.email}
             link={`mailto:${data.email}?subject=We'd like to talk to you about...`}
           />
-          <HeaderItem icon={faGlobeEurope} value={data.website} link={data.website} />
+          <HeaderItem theme={theme} icon={faGlobeEurope} value={data.website} link={data.website} />
           <HeaderItem
+            theme={theme}
             icon={faMapPin}
             value={data.address}
             link={`https://www.google.com/maps/place/${data.address}/`}
@@ -70,9 +92,9 @@ const Header: FC = () => {
         <p>
           This CV is written in React.js and is fully responsive.
           <br />
-          <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P
-          <br />- You can download a PDF version by clicking on the button below
-          <br />- <del>You can export it in JSON by cliking the code button below</del> (still in development)
+          <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P (recommended)
+          <br />- You can generate a PDF version by clicking on the button below (desktop)
+          <br />- <del>You can export it in JSON by clicking the code button below</del> (still in development)
           <br />- Or you can clone the source code at{" "}
           <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
             Github
@@ -83,13 +105,16 @@ const Header: FC = () => {
           V2 will probably run Doom
         </p>
 
-        <div>
-          <a className="pdf-button" title="Download PDF" onClick={printDocument}>
+        <div className="buttons-area">
+          <div className="pdf-button" title="Download PDF" onClick={printDocument}>
             <FontAwesomeIcon className="icon" icon={faFilePdf} />
-          </a>
+          </div>
           {/* <button type="button" className="json-button" title="Export JSON" onClick={fetchJSON}>
             <FontAwesomeIcon className="icon" icon={faCode} />
           </button> */}
+          <div className="theme-button" title="Toggle dark/light theme" onClick={toggleTheme}>
+            <FontAwesomeIcon className="icon" icon={theme === "light" ? faMoon : faSun} />
+          </div>
         </div>
       </div>
     </div>

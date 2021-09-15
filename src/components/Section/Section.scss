@@ -16,6 +16,10 @@
     .icon {
       color: $secondary;
       margin-right: 10px;
+
+      &--dark {
+        color: $background;
+      }
     }
   }
 
