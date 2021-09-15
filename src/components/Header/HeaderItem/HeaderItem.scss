@@ -18,6 +18,10 @@
     .icon {
       font-size: 20px;
       color: $secondary;
+
+      &--dark {
+        color: $background;
+      }
     }
   }
 

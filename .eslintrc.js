@@ -6,6 +6,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": 0,
     "@typescript-eslint/no-empty-interface": 0,
     "@typescript-eslint/no-var-requires": 0,
+    "react/prop-types": 0,
   },
   plugins: ["react", "@typescript-eslint"],
 };

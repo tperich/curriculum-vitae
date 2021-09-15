@@ -38,6 +38,11 @@
   }
 }
 
+.buttons-area {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 @media print {
   .header-notes {
     display: none;
