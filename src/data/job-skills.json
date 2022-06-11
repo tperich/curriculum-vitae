@@ -16,11 +16,11 @@
       },
       {
         "title": "React",
-        "details": "Redux, MobX, Saga, Reselect, etc."
+        "details": "Redux, MobX, Zustand, Saga, Reselect, React Query, etc."
       },
       {
         "title": "React Native",
-        "details": "React Native CLI, Expo CLI"
+        "details": "React Native CLI, Expo CLI, Detox"
       }
     ]
   },
@@ -29,7 +29,7 @@
     "skills": [
       {
         "title": "PHP",
-        "details": "Laravel, phpunit, phpdoc, Swagger"
+        "details": "Laravel, phpunit, phpdoc, Swagger (OpenAPI)"
       },
       {
         "title": "NodeJS",
@@ -37,10 +37,10 @@
       },
       {
         "title": "Python",
-        "details": "Flask, Django"
+        "details": "Flask, Django, FastAPI"
       },
       {
-        "title": "MySQL, MariaDB, MongoDB",
+        "title": "MySQL, MariaDB, MongoDB, ClickHouse",
         "details": ""
       }
     ]
@@ -75,7 +75,7 @@
     "skills": [
       {
         "title": "Enumeration",
-        "details": "nmap, dirbuster/gobuster"
+        "details": "nmap, dirbuster/gobuster, various OSINT methods"
       },
       {
         "title": "Pentesting",
