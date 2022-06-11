@@ -1,10 +1,10 @@
 class LocalStorageService {
-  public setItem = (key: string, data: any): void => {
+  public setItem = <Item>(key: string, data: Item): void => {
     const stringified = JSON.stringify(data);
     window.localStorage.setItem(key, stringified);
   };
 
-  public getItem = (key: string): any | null => {
+  public getItem = <Item>(key: string): Item | null => {
     const item = window.localStorage.getItem(key);
     if (item) {
       return JSON.parse(item);

@@ -22,9 +22,11 @@ const App: FC = () => {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const theme = LocalStorageService.getItem("theme");
-    document.body.classList.add(theme);
-    theme && setTheme(theme);
+    const theme = LocalStorageService.getItem<Theme>("theme");
+    if (theme) {
+      document.body.classList.add(theme);
+      theme && setTheme(theme);
+    }
   }, []);
 
   const toggleTheme = (theme: Theme) => {

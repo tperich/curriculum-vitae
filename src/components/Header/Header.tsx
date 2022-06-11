@@ -1,11 +1,9 @@
 import React, { FC } from "react";
 
-import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCode,
   faEnvelope,
   faMoon,
   faSun,
@@ -13,12 +11,10 @@ import {
   faGlobeEurope,
   faMapPin,
   faPhone,
-  faLightbulb,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { HeaderItem } from "./HeaderItem";
 import { Theme } from "../../types/entities";
-import { API } from "../../constants";
 import data from "../../data/header.json";
 import "./Header.scss";
 
@@ -47,18 +43,6 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
     const pdf = new jsPDF();
     pdf.addImage(imageData, "PNG", 20, -3, -160, -160, "FAST", "FAST");
     pdf.save("CV-Tomislav-Peric.pdf");
-  };
-
-  const fetchJSON = () => {
-    const url = `${API.BASE_URL}:${API.API_PORT}/generate-json`;
-    axios
-      .get(url)
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
   };
 
   const toggleTheme = () => {
@@ -94,7 +78,6 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
           <br />
           <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P (recommended)
           <br />- You can generate a PDF version by clicking on the button below (desktop)
-          <br />- <del>You can export it in JSON by clicking the code button below</del> (still in development)
           <br />- Or you can clone the source code at{" "}
           <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
             Github
@@ -109,9 +92,6 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
           <div className="pdf-button" title="Download PDF" onClick={printDocument}>
             <FontAwesomeIcon className="icon" icon={faFilePdf} />
           </div>
-          {/* <button type="button" className="json-button" title="Export JSON" onClick={fetchJSON}>
-            <FontAwesomeIcon className="icon" icon={faCode} />
-          </button> */}
           <div className="theme-button" title="Toggle dark/light theme" onClick={toggleTheme}>
             <FontAwesomeIcon className="icon" icon={theme === "light" ? faMoon : faSun} />
           </div>
