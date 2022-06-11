@@ -4,9 +4,9 @@
 
 Make sure you have docker and docker-compose installed!
 
-- To run a development version, simply run: `sudo docker-compose up`
-
-- To run a production version, run: `sudo docker-compose -f docker-compose.prod.yml up`
+1. Install dependencies by running `yarn install` or `npm install`
+2. To run a development version, simply run: `sudo docker-compose up`
+3. To run a production version, run: `sudo docker-compose -f docker-compose.prod.yml up`
 
 ## Available npm/yarn scripts
 
