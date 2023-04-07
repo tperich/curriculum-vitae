@@ -15,6 +15,7 @@ const SectionItem: FC<Props> = ({ item }: Props) => {
       {"position" in item && <p>{item.position}</p>}
 
       <p className="section-item__dates">
+        {"hours" in item && <p>{item.hours}</p>}
         {"startedAt" in item && (
           <>
             {item.startedAt} - {item.current ? "Current" : item.endedAt}
