@@ -1,6 +1,6 @@
 ### CV
 
-## Running in docker
+## Running in docker -- OUTDATED
 
 Make sure you have docker and docker-compose installed!
 
