@@ -79,7 +79,7 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
           <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P (recommended)
           <br />- You can generate a PDF version by clicking on the button below (desktop)
           <br />- Or you can clone the source code at{" "}
-          <a href="https://github.com/tperich/cv-react" target="_blank" rel="noreferrer">
+          <a href="https://github.com/tperich/curriculum-vitae" target="_blank" rel="noreferrer">
             Github
           </a>{" "}
           and run it inside Docker!
