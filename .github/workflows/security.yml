@@ -48,7 +48,7 @@ jobs:
           name: docker-image
           path: /tmp
 
-      - run: ls /tmp
+      - run: ls -al /tmp/image.tar
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
