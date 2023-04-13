@@ -10,7 +10,7 @@ on:
 
 jobs:
   eslint:
-    name: Run eslint
+    name: ESLint
     runs-on: ubuntu-latest
     permissions:
       contents: read
