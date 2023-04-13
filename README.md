@@ -5,10 +5,10 @@
 [![Security](https://github.com/tperich/curriculum-vitae/actions/workflows/security.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/security.yml)
 [![Linting](https://github.com/tperich/curriculum-vitae/actions/workflows/linting.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/linting.yml)
 
-<image width="100px" src="public/react.svg" alt="react logo" /> +
-<image width="100px" src="public/typescript.svg" alt="typescript logo" />  +
-<image width="100px" src="public/vite.svg" alt="vite logo" />  =
-<image width="100px" src="public/book.svg" alt="book icon" />
+<image max-width="100px" src="public/react.svg" alt="react logo" /> +
+<image max-width="100px" src="public/typescript.svg" alt="typescript logo" />  +
+<image max-width="100px" src="public/vite.svg" alt="vite logo" />  =
+<image max-width="85px" src="public/book.svg" alt="book icon" />
 
 A modern and interactive web-based Curriculum Vitae built with React, TypeScript, and Vite.
 
