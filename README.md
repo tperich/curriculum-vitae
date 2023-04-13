@@ -8,7 +8,7 @@
 <a href="https://react.dev/"><image width="100px" src="public/react.svg" alt="react logo" /></a> +
 <a href="https://typescriptlang.org/"><image width="100px" src="public/typescript.svg" alt="typescript logo" /></a> +
 <a href="https://vitejs.dev/"><image width="100px" src="public/vite.svg" alt="vite logo" /></a> =
-<a href="https://github.com/tperich/curriculum-vitae/"><image width="100px" src="public/book.svg" alt="book icon" /></a>
+<a href="https://github.com/tperich/curriculum-vitae/"><image width="85px" src="public/book.svg" alt="book icon" /></a>
 
 A modern and interactive web-based Curriculum Vitae built with React, TypeScript, and Vite.
 
