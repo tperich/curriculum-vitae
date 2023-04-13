@@ -11,5 +11,5 @@ Make sure you have docker and docker-compose installed!
 
 | Command         | Explanation                                                                                                  |
 | --------------- | ------------------------------------------------------------------------------------------------------------ |
-| `yarn run dev`  | Starts the development server on localhost:5173                                                              |
-| `yarn run build`| Builds the project using Vite                                                                                |
+| `npm run dev`  | Starts the development server on localhost:5173                                                              |
+| `npm run build`| Builds the project using Vite                                                                                |
