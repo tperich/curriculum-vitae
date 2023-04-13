@@ -2,8 +2,8 @@
 
 # Curriculum Vitae
 
-[![Security](https://github.com/tperich/curriculum-vitae/actions/workflows/security.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/security.yml)
-[![Linting](https://github.com/tperich/curriculum-vitae/actions/workflows/linting.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/linting.yml)
+[![Security](https://github.com/tperich/curriculum-vitae/actions/workflows/security.yml/badge.svg)](https://github.com/tperich/curriculum-vitae/actions/workflows/security.yml)
+[![Linting](https://github.com/tperich/curriculum-vitae/actions/workflows/linting.yml/badge.svg)](https://github.com/tperich/curriculum-vitae/actions/workflows/linting.yml)
 
 <a href="https://react.dev/"><image width="100px" src="public/react.svg" alt="react logo" /></a> +
 <a href="https://typescriptlang.org/"><image width="100px" src="public/typescript.svg" alt="typescript logo" /></a> +
