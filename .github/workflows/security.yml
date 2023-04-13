@@ -1,4 +1,4 @@
-name: Security
+name: Run Trivy scan
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
       - "*"
 
 jobs:
-  security-check:
-    name: Security check
+  build-image:
+    name: Build docker image
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -30,6 +30,23 @@ jobs:
           file: Dockerfile.prod
           tags: tperich/curriculum_vitae:prod
           outputs: type=docker,dest=/tmp/image.tar
+
+      - name: Upload Docker image
+        uses: actions/upload-artifact@v3
+        with:
+          name: myimage
+          path: /tmp/image.tar
+
+  trivy-scan:
+    name: Run Trivy scan
+    runs-on: ubuntu-latest
+    needs: build-image
+    steps:
+      - name: Download Docker image
+        uses: actions/download-artifact@v2
+        with:
+          name: docker-image
+          path: /tmp
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
