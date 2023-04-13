@@ -5,7 +5,7 @@
 [![Security](https://github.com/tperich/curriculum-vitae/actions/workflows/security.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/security.yml)
 [![Linting](https://github.com/tperich/curriculum-vitae/actions/workflows/linting.yml/badge.svg)](https://github.com/yourusername/curriculum-vitae/actions/workflows/linting.yml)
 
-<image width="100px" src="public/react.svg" alt="react logo" /> <h3>+</h3>
+<span><image width="100px" src="public/react.svg" alt="react logo" /> <h3>+</h3></span>
 <image width="100px" src="public/typescript.svg" alt="typescript logo" /> <h3>+</h3>
 <image width="100px" src="public/vite.svg" alt="vite logo" /> <h3>=</h3>
 <image width="100px" src="public/book.svg" alt="book icon" />
