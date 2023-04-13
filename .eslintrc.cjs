@@ -9,4 +9,9 @@ module.exports = {
     "react/prop-types": 0,
   },
   plugins: ["react", "@typescript-eslint"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 };
