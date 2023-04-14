@@ -1,13 +1,10 @@
 import React, { FC } from "react";
 
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faMoon,
   faSun,
-  faFilePdf,
   faGlobeEurope,
   faMapPin,
   faPhone,
@@ -24,26 +21,7 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
-  const isMacOS = window.navigator.platform.startsWith("Mac");
-
-  const printDocument = async () => {
-    // Fix for html2canvas not showing SVG
-    const svgElements = document.body.querySelectorAll("svg");
-    svgElements.forEach(function (item) {
-      item.setAttribute("width", item.getBoundingClientRect().width.toString());
-      item.setAttribute("height", item.getBoundingClientRect().height.toString());
-    });
-
-    const headerText = document.getElementsByClassName("header-notes")[0];
-    headerText.classList.add("invisible");
-
-    const imageData = await (await html2canvas(document.body)).toDataURL("image/png");
-
-    headerText.classList.remove("invisible");
-    const pdf = new jsPDF();
-    pdf.addImage(imageData, "PNG", 20, -3, -160, -160, "FAST", "FAST");
-    pdf.save("CV-Tomislav-Peric.pdf");
-  };
+  const isMacOSUserAgent = window.navigator.userAgent.includes("Mac OS");
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -75,23 +53,21 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
       <div className="header-notes">
         <p>
           This CV is written in React.js and is fully responsive.
+
           <br />
-          <br />- You can print it using {isMacOS ? "Command" : "Ctrl"} + P (recommended)
-          <br />- You can generate a PDF version by clicking on the button below (desktop)
+          <br />- You can print it using {isMacOSUserAgent ? "Command" : "Ctrl"} + P (recommended)
           <br />- Or you can clone the source code at{" "}
-          <a href="https://github.com/tperich/curriculum-vitae" target="_blank" rel="noreferrer">
+
+          <a
+          {...theme === "dark" && { className: 'dark' }}
+          href="https://github.com/tperich/curriculum-vitae" target="_blank" rel="noreferrer">
             Github
           </a>{" "}
+
           and run it inside Docker!
-          <br />
-          <br />
-          V2 will probably run Doom
         </p>
 
         <div className="buttons-area">
-          <div className="pdf-button" title="Download PDF" onClick={printDocument}>
-            <FontAwesomeIcon className="icon" icon={faFilePdf} />
-          </div>
           <div className="theme-button" title="Toggle dark/light theme" onClick={toggleTheme}>
             <FontAwesomeIcon className="icon" icon={theme === "light" ? faMoon : faSun} />
           </div>
