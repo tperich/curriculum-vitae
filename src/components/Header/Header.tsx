@@ -5,7 +5,6 @@ import {
   faEnvelope,
   faMoon,
   faSun,
-  faFilePdf,
   faGlobeEurope,
   faMapPin,
   faPhone,
@@ -54,16 +53,18 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
       <div className="header-notes">
         <p>
           This CV is written in React.js and is fully responsive.
+
           <br />
           <br />- You can print it using {isMacOSUserAgent ? "Command" : "Ctrl"} + P (recommended)
           <br />- Or you can clone the source code at{" "}
-          <a href="https://github.com/tperich/curriculum-vitae" target="_blank" rel="noreferrer">
+
+          <a
+          {...theme === "dark" && { className: 'dark' }}
+          href="https://github.com/tperich/curriculum-vitae" target="_blank" rel="noreferrer">
             Github
           </a>{" "}
+
           and run it inside Docker!
-          <br />
-          <br />
-          V2 will probably run Doom
         </p>
 
         <div className="buttons-area">
