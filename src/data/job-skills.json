@@ -1,5 +1,55 @@
 [
   {
+    "title": "Security",
+    "skills": [
+      {
+        "title": "Web Application Auditing",
+        "details": "Burpsuite, OWASP ZAP"
+      },
+      {
+        "title": "Network Security",
+        "details": "firewalls, various IDS/IPSs, VPNs, snort, suricata, CrowdSec, iptables, ufw"
+      },
+      {
+        "title": "Enumeration",
+        "details": "nmap, dirbuster/gobuster, various OSINT methods"
+      },
+      {
+        "title": "Vulnerability Assessment and Management",
+        "details": "nuclei, Nessus, Nikto, OpenVAS, WireShark"
+      }
+    ]
+  },
+  {
+    "title": "DevOps",
+    "skills": [
+      {
+        "title": "Provisioning",
+        "details": "Ansible, fabric"
+      },
+      {
+        "title": "Containerization",
+        "details": "Docker, Podman, Vagrant, k8s"
+      },
+      {
+        "title": "CI/CD",
+        "details": "Jenkins, TeamCity CI, Gitlab CI, Fastlane, GitHub Actions"
+      },
+      {
+        "title": "Monitoring",
+        "details": "Prometheus, Grafana, Graylog"
+      },
+      {
+        "title": "Security SAST",
+        "details": "trivy, njsscan, hadolint"
+      },
+      {
+        "title": "Security DAST",
+        "details": "OWASP ZAP, Selenium, nuclei"
+      }
+    ]
+  },
+  {
     "title": "Frontend",
     "skills": [
       {
@@ -42,48 +92,6 @@
       {
         "title": "MySQL, MariaDB, MongoDB, ClickHouse",
         "details": ""
-      }
-    ]
-  },
-  {
-    "title": "DevOps",
-    "skills": [
-      {
-        "title": "Provisioning",
-        "details": "Ansible"
-      },
-      {
-        "title": "Containerization",
-        "details": "Docker, Podman, Vagrant"
-      },
-      {
-        "title": "CI/CD",
-        "details": "Jenkins, TeamCity CI, Gitlab CI, Fastlane"
-      },
-      {
-        "title": "Monitoring",
-        "details": "Prometheus, Grafana, Graylog"
-      },
-      {
-        "title": "Security",
-        "details": "DAST, SAST"
-      }
-    ]
-  },
-  {
-    "title": "Security",
-    "skills": [
-      {
-        "title": "Enumeration",
-        "details": "nmap, dirbuster/gobuster, various OSINT methods"
-      },
-      {
-        "title": "Pentesting",
-        "details": "Burpsuite, OWASP ZAP, Metasploit"
-      },
-      {
-        "title": "Vulnerability Assessment",
-        "details": "Nessus, Nikto, OpenVAS, WireShark"
       }
     ]
   },
