@@ -4,7 +4,7 @@
     "skills": [
       {
         "title": "Web Application Auditing",
-        "details": "Burpsuite, OWASP ZAP"
+        "details": "Burpsuite, OWASP ZAP, ffuf, w3af"
       },
       {
         "title": "Network Security",
@@ -12,11 +12,15 @@
       },
       {
         "title": "Enumeration",
-        "details": "nmap, dirbuster/gobuster, various OSINT methods"
+        "details": "nmap, dirbuster/gobuster, amass, various OSINT methods"
       },
       {
         "title": "Vulnerability Assessment and Management",
         "details": "nuclei, Nessus, Nikto, OpenVAS, WireShark"
+      },
+      {
+        "title": "Adversary Simulation",
+        "details": "metasploit, armitage, cobalt strike"
       }
     ]
   },
@@ -46,6 +50,10 @@
       {
         "title": "Security DAST",
         "details": "OWASP ZAP, Selenium, nuclei"
+      },
+      {
+        "title": "AWS",
+        "details": ""
       }
     ]
   },
