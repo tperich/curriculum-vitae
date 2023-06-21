@@ -1,6 +1,6 @@
 [
   {
-    "title": "Cyber Security Engineer / Software Developer",
+    "title": "Cyber Security Engineer",
     "company": "Connectify Inc.",
     "hours": "Full-Time",
     "startedAt": "09-2022",
@@ -50,15 +50,6 @@
     "hours": "Full-Time",
     "startedAt": "05-2017",
     "endedAt": "09-2018",
-    "current": false,
-    "address": "Novi Sad, Serbia"
-  },
-  {
-    "title": "Photographer",
-    "company": "WeRunNS",
-    "hours": "Full-Time",
-    "startedAt": "03-2016",
-    "endedAt": "05-2017",
     "current": false,
     "address": "Novi Sad, Serbia"
   }
