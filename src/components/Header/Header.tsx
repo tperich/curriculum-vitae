@@ -51,7 +51,11 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
       </div>
 
       <div className="header-notes">
-        <p>
+        <div className="print-inline">
+          <img height="200px" src="public/me.jpg" />
+        </div>
+
+        <p className="no-print">
           This CV is written in React.js and is fully responsive.
 
           <br />
@@ -67,7 +71,7 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
           and run it inside Docker!
         </p>
 
-        <div className="buttons-area">
+        <div className="buttons-area no-print">
           <div className="theme-button" title="Toggle dark/light theme" onClick={toggleTheme}>
             <FontAwesomeIcon className="icon" icon={theme === "light" ? faMoon : faSun} />
           </div>

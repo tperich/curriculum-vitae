@@ -45,13 +45,7 @@ const App: FC = () => {
     <div className={`root ${theme}`}>
       <Header theme={theme} setTheme={toggleTheme} />
 
-      <Section theme={theme} icon={faLaptopCode} title="Work Experience">
-        {workData.map((job, index) => (
-          <SectionItem key={index} item={job} />
-        ))}
-      </Section>
-
-      <Section theme={theme} icon={faPeopleArrows} title="Communicational skills">
+      <Section theme={theme} icon={faPeopleArrows} title="Objective">
         {commData.text.split("\n").map((line, index) => (
           <span key={index}>
             <br />
@@ -59,6 +53,8 @@ const App: FC = () => {
           </span>
         ))}
         {/* Additional break-lines due to printing offset */}
+        <br className="print-inline" />
+        <br className="print-inline" />
         <br className="print-inline" />
         <br className="print-inline" />
       </Section>
@@ -79,17 +75,25 @@ const App: FC = () => {
         ))}
       </Section>
 
-      <Section theme={theme} icon={faSchool} title="Education">
-        {educationData.map((item, index) => (
-          <SectionItem key={index} item={item} />
+      <Section theme={theme} icon={faLaptopCode} title="Work Experience">
+        {workData.map((job, index) => (
+          <SectionItem key={index} item={job} />
         ))}
       </Section>
 
-      <Section theme={theme} icon={faHandHoldingHeart} title="Volunteering">
-        {volunteeringData.map((item, index) => (
-          <SectionItem key={index} item={item} />
-        ))}
-      </Section>
+      <div style={{ display: "flex", flexFlow: "row nowrap", width: "100vw" }}>
+        <Section containerStyles={{ flex: 1 }} theme={theme} icon={faSchool} title="Education">
+          {educationData.map((item, index) => (
+            <SectionItem key={index} item={item} />
+          ))}
+        </Section>
+
+        <Section containerStyles={{ flex: 1 }} theme={theme} icon={faHandHoldingHeart} title="Volunteering">
+          {volunteeringData.map((item, index) => (
+            <SectionItem key={index} item={item} />
+          ))}
+        </Section>
+      </div>
     </div>
   );
 };

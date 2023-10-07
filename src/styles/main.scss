@@ -56,11 +56,14 @@ a {
 @media print {
   html,
   body {
-    height: 99%;
-    padding: 40px;
+    padding: 30px;
   }
 
   .print-inline {
     display: inline;
+  }
+
+  .no-print {
+    display: none;
   }
 }

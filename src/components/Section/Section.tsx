@@ -21,7 +21,7 @@ const Section: FC<Props> = ({ theme, icon, title = "Title", children, containerS
         {icon && <FontAwesomeIcon className={`icon icon--${theme}`} icon={icon} />}
         <h1>{title}</h1>
       </div>
-      <hr />
+      <hr className="no-print" />
 
       <div className="section__children">{children}</div>
     </div>
