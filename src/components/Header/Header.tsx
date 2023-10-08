@@ -12,7 +12,6 @@ import {
 
 import { HeaderItem } from "./HeaderItem";
 import { Theme } from "../../types/entities";
-import data from "../../data/header.json";
 import "./Header.scss";
 
 interface HeaderProps {
@@ -27,25 +26,33 @@ const Header: FC<HeaderProps> = ({ theme, setTheme }) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const user = {
+    name: import.meta.env.VITE_NAME || "John Doe",
+    phone: import.meta.env.VITE_PHONE || "+(000) 00 000 0000",
+    email: import.meta.env.VITE_EMAIL || "john@example.com",
+    website: import.meta.env.VITE_WEBSITE || "https://example.org",
+    location: import.meta.env.VITE_LOCATION || "Sidney, Australia",
+  }
+
   return (
     <div className={`header ${theme}`}>
       <div className="header-hero">
-        <h1 className="header__title">{data.title}</h1>
+        <h1 className="header__title">{user.name}</h1>
 
         <div className="header__contact">
-          <HeaderItem theme={theme} icon={faPhone} value={data.phone} link={`tel:${data.phone}`} />
+          <HeaderItem theme={theme} icon={faPhone} value={user.phone} link={`tel:${user.phone}`} />
           <HeaderItem
             theme={theme}
             icon={faEnvelope}
-            value={data.email}
-            link={`mailto:${data.email}?subject=We'd like to talk to you about...`}
+            value={user.email}
+            link={`mailto:${user.email}?subject=We'd like to talk to you about...`}
           />
-          <HeaderItem theme={theme} icon={faGlobeEurope} value={data.website} link={data.website} />
+          <HeaderItem theme={theme} icon={faGlobeEurope} value={user.website} link={user.website} />
           <HeaderItem
             theme={theme}
             icon={faMapPin}
-            value={data.address}
-            link={`https://www.google.com/maps/place/${data.address}/`}
+            value={user.location}
+            link={`https://www.google.com/maps/place/${user.location}/`}
           />
         </div>
       </div>
