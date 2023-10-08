@@ -1,5 +1,14 @@
 [
   {
+    "title": "DevSecOps Engineer",
+    "company": "Jobstep GmbH",
+    "hours": "Full-Time",
+    "startedAt": "08-2023",
+    "endedAt": "04-2023",
+    "current": true,
+    "address": "Novi Sad, Serbia"
+  },
+  {
     "title": "Cyber Security Engineer",
     "company": "Connectify Inc.",
     "hours": "Full-Time",
@@ -9,16 +18,7 @@
     "address": "Novi Sad, Serbia"
   },
   {
-    "title": "Cyber Security Engineer",
-    "company": "GG CyberSec Systems",
-    "hours": "Part-Time",
-    "startedAt": "02-2022",
-    "endedAt": "11-2022",
-    "current": false,
-    "address": "Novi Sad, Serbia"
-  },
-  {
-    "title": "Cyber Security Analyst",
+    "title": "Cyber Security Researcher / Analyst",
     "company": "StackPath LLC / Orange Cloud D.O.O.",
     "hours": "Full-Time",
     "startedAt": "08-2021",
@@ -36,7 +36,7 @@
     "address": "Novi Sad, Serbia"
   },
   {
-    "title": "Web Developer",
+    "title": "Software Developer",
     "company": "Vivify Ideas D.O.O.",
     "hours": "Full-Time",
     "startedAt": "01-2019",
@@ -51,6 +51,6 @@
     "startedAt": "05-2017",
     "endedAt": "09-2018",
     "current": false,
-    "address": "Novi Sad, Serbia"
+    "address": "Novi Sad, Serbia\n"
   }
 ]
