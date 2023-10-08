@@ -1,30 +1,5 @@
 [
   {
-    "title": "Security",
-    "skills": [
-      {
-        "title": "Web Application Auditing",
-        "details": "Burpsuite, OWASP ZAP, ffuf, w3af"
-      },
-      {
-        "title": "Network Security",
-        "details": "firewalls, various IDS/IPSs, VPNs, snort, suricata, CrowdSec, iptables, ufw"
-      },
-      {
-        "title": "Enumeration",
-        "details": "nmap, dirbuster/gobuster, amass, various OSINT methods"
-      },
-      {
-        "title": "Vulnerability Assessment and Management",
-        "details": "nuclei, Nessus, Nikto, OpenVAS, WireShark"
-      },
-      {
-        "title": "Adversary Simulation",
-        "details": "metasploit, armitage, cobalt strike"
-      }
-    ]
-  },
-  {
     "title": "DevOps",
     "skills": [
       {
@@ -33,7 +8,7 @@
       },
       {
         "title": "Containerization",
-        "details": "Docker, Podman, Vagrant, k8s"
+        "details": "Docker, Podman, Vagrant, Kubernetes"
       },
       {
         "title": "CI/CD",
@@ -41,7 +16,7 @@
       },
       {
         "title": "Monitoring",
-        "details": "Prometheus, Grafana, Graylog"
+        "details": "InfluxDB, Prometheus, Grafana, Graylog"
       },
       {
         "title": "Security SAST",
@@ -53,32 +28,52 @@
       },
       {
         "title": "AWS",
-        "details": ""
+        "details": "AWS CLI, EC2, S3, RDS, etc."
+      },
+      {
+        "title": "Infrastructure as code",
+        "details": "Terraform"
       }
     ]
   },
   {
-    "title": "Frontend",
+    "title": "Security",
     "skills": [
       {
-        "title": "HTML",
-        "details": "HTML5, semantic HTML"
+        "title": "Penetration testing and ethical hacking",
+        "details": "web and mobile application auditing, network security, adversary simulation"
       },
       {
-        "title": "CSS",
-        "details": "SASS/SCSS, BEM methodology"
+        "title": "Network security",
+        "details": "firewall configuration, VPN implementation, IDS/IPS management"
       },
       {
-        "title": "JavaScript",
-        "details": "ES6+, Jest, Cypress, Webpack, jQuery"
+        "title": "Vulnerability assessment and management",
+        "details": "utilizing tools like nuclei, Nessus, Nikto, OpenVAS, Wireshark"
       },
       {
-        "title": "React",
-        "details": "Redux, MobX, Zustand, Saga, Reselect, React Query, etc."
+        "title": "Incident response",
+        "details": "developing and implementing incident response plans"
       },
       {
-        "title": "React Native",
-        "details": "React Native CLI, Expo CLI, Detox"
+        "title": "Risk assessment and management",
+        "details": "conducting risk assessments and providing mitigation strategies"
+      },
+      {
+        "title": "Adversary simulation",
+        "details": "metasploit, armitage, cobalt strike"
+      },
+      {
+        "title": "Security monitoring and analysis",
+        "details": "experience with tools like SIEM, log analysis, and threat hunting"
+      },
+      {
+        "title": "Various OSINT methods",
+        "details": "utilizing open-source intelligence techniques for information gathering and analysis"
+      },
+      {
+        "title": "Exploit development",
+        "details": "creating custom Python, bash, and Ruby exploits to target specific vulnerabilities"
       }
     ]
   },
@@ -87,36 +82,23 @@
     "skills": [
       {
         "title": "PHP",
-        "details": "Laravel, phpunit, phpdoc, Swagger (OpenAPI)"
+        "details": "Laravel, phpunit, phpdoc, Swagger/OpenAPI"
       },
       {
         "title": "NodeJS",
-        "details": "Express.js"
+        "details": "Express.js, Passport"
       },
       {
         "title": "Python",
         "details": "Flask, Django, FastAPI"
       },
       {
-        "title": "MySQL, MariaDB, MongoDB, ClickHouse",
-        "details": ""
-      }
-    ]
-  },
-  {
-    "title": "Other",
-    "skills": [
-      {
-        "title": "Git",
+        "title": "MySQL, MariaDB, MongoDB, ClickHouse, Redis",
         "details": ""
       },
       {
-        "title": "Shell",
-        "details": "sh, bash, zsh, python, make"
-      },
-      {
-        "title": "Brainfuck",
-        "details": "esoteric programming language"
+        "title": "Other",
+        "details": "git, sh, bash, zsh, python, make"
       }
     ]
   }
