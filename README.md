@@ -46,6 +46,10 @@ git clone https://github.com/tperich/curriculum-vitae.git
 npm install
 ```
 
+3. Copy .env.example to .env and fill out your desired information
+
+4. Edit files in `src/data/` for work experience and skills
+
 ### Development
 
 To start the development server, run:
