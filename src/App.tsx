@@ -53,10 +53,6 @@ const App: FC = () => {
           </span>
         ))}
         {/* Additional break-lines due to printing offset */}
-        <br className="print-inline" />
-        <br className="print-inline" />
-        <br className="print-inline" />
-        <br className="print-inline" />
       </Section>
 
       <Section theme={theme} icon={faHammer} title="Job-related skills">
