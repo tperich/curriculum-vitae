@@ -23,6 +23,11 @@ const SectionItem: FC<Props> = ({ item }: Props) => {
         )}
       </p>
       <p className="section-item__address">{item.address}</p>
+      <ul>
+        {item.achievements?.map((achievement, index) => <li className="section-item__achievement" key={index}>{achievement}</li>)}
+      </ul>
+      {item.techStack && <p className="section-item__tech-stack"><b>Tech stack:</b> {item.techStack}</p>}
+      {item.responsibilities && <p className="section-item__tech-stack"><b>Primary responsibilities:</b> {item.responsibilities}</p>}
     </div>
   );
 };

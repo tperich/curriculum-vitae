@@ -6,7 +6,16 @@
     "startedAt": "08-2023",
     "endedAt": "04-2023",
     "current": true,
-    "address": "Novi Sad, Serbia"
+    "address": "Novi Sad, Serbia",
+    "achievements": [
+      "Reduced company infrastructure costs by ~90%",
+      "Redesigned infrastructure to incorporate new technologies and improve performance",
+      "Secured products by incorporating SAST and DAST within the CI/CD pipeline",
+      "Helped teams develop and deliver mass-scale products to market",
+      "Lead a training program against phishing attacks"
+    ],
+    "techStack": "AWS, Terraform, Docker, trivy, hadolint, njsscan, Jenkins, Github Actions, nuclei",
+    "responsibilities": "DevOps Engineering, infrastructure management, security, mentoring, code review and refactor"
   },
   {
     "title": "Cyber Security Engineer",
@@ -15,7 +24,14 @@
     "startedAt": "09-2022",
     "endedAt": "04-2023",
     "current": false,
-    "address": "Novi Sad, Serbia"
+    "address": "Novi Sad, Serbia",
+    "achievements": [
+      "Implemented static application security testing in a widespread architecture",
+      "Implemented various user-facing security measures across multiple applications",
+      "Helped secure various services by manual code review and analysis"
+    ],
+    "techStack": "trivy, Hadolint, njsscan, Docker, Kubernetes, Jenkins, Ansible, Ansible Vault, Grafana, Github Actions, Keycloak, Zitadel, NodeJS",
+    "responsibilities": "Cyber security engineering, infrastructure management, security code review and refactor"
   },
   {
     "title": "Cyber Security Researcher / Analyst",
@@ -24,7 +40,15 @@
     "startedAt": "08-2021",
     "endedAt": "09-2022",
     "current": false,
-    "address": "Belgrade, Serbia"
+    "address": "Belgrade, Serbia",
+    "achievements": [
+      "Implemented rules for effectively protecting over 300,000 clients (websites)",
+      "Developed and maintained advanced heuristics for web application security and new methods to detect attack vectors",
+      "Helped bring product among the world-leading competitors (against Cloudflare, Akamai, Fortinet, F5), being scored among the top 5 most secure WAFs in the world",
+      "Written and published security advisories on behalf of StackPath thus helping users mitigate potential threats"
+    ],
+    "techStack": "nginx, Python, bash, BrupSuite, OWASP ZAP, nuclei, Clickhouse, Graylog, Kibana, Selenium, OSINT",
+    "responsibilities": "Cyber security research, cyber security analysis, heuristic development, root cause analysis, mitigation, triage"
   },
   {
     "title": "Software Developer",
@@ -33,7 +57,17 @@
     "startedAt": "01-2020",
     "endedAt": "08-2021",
     "current": false,
-    "address": "Novi Sad, Serbia"
+    "address": "Novi Sad, Serbia",
+    "achievements": [
+      "Lead a team to deliver a complex mobile application to market",
+      "Set up a fully automated CI/CD pipeline for mobile applications",
+      "Implemented automated unit, integration, and E2E testing for the mobile platform",
+      "Enforced code quality and best practices through code review and linting",
+      "Engaged with the infrastructure team to help deliver planned infrastructure-related tasks",
+      "Set up a physical server on-premise"
+    ],
+    "techStack": "React, React Native, Redux, Saga, PHP (Laravel), Javascript (Typescript), Ansible, TeamCity CI, Jenkins, Fastlane, Jest, Detox",
+    "responsibilities": "Full-stack development, mobile development, DevOps engineering, automated E2E testing"
   },
   {
     "title": "Software Developer",
@@ -42,7 +76,14 @@
     "startedAt": "01-2019",
     "endedAt": "07-2019",
     "current": false,
-    "address": "Novi Sad, Serbia"
+    "address": "Novi Sad, Serbia",
+    "achievements": [
+      "Delivered multiple applications to the market",
+      "Implemented a new kind of Single Sign-On passwordless system",
+      "Conducted code review to ensure best practices and a healthy code base"
+    ],
+    "techStack": "React, React Native, PHP (Laravel), phpunit, phpdoc, NodeJS, redis, Oauth2",
+    "responsibilities": "Full-stack development, mobile development, code reviews"
   },
   {
     "title": "System Administrator / Tech Support",
@@ -51,6 +92,13 @@
     "startedAt": "05-2017",
     "endedAt": "09-2018",
     "current": false,
-    "address": "Novi Sad, Serbia\n"
+    "address": "Novi Sad, Serbia\n",
+    "achievements": [
+      "Maintained a network of around 500 devices",
+      "Automated user inventory management",
+      "Automated setting up and deploying new devices to users"
+    ],
+    "techStack": "Python, Bash, Powershell, Windows, Linux, etc.",
+    "responsibilities": "System administration, tech support, device maintenance"
   }
 ]
