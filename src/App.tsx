@@ -52,7 +52,12 @@ const App: FC = () => {
             {line}
           </span>
         ))}
-        {/* Additional break-lines due to printing offset */}
+      </Section>
+
+      <Section theme={theme} icon={faLaptopCode} title="Work Experience">
+        {workData.map((job, index) => (
+          <SectionItem key={index} item={job} />
+        ))}
       </Section>
 
       <Section theme={theme} icon={faHammer} title="Job-related skills">
@@ -68,12 +73,6 @@ const App: FC = () => {
               ))}
             </ul>
           </div>
-        ))}
-      </Section>
-
-      <Section theme={theme} icon={faLaptopCode} title="Work Experience">
-        {workData.map((job, index) => (
-          <SectionItem key={index} item={job} />
         ))}
       </Section>
 
